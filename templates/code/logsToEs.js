@@ -8,6 +8,7 @@ var indexPrefix = process.env.INDEX_PREFIX;
 
 exports.handler = function(input, context) {
     // decode input from base64
+    console.log(input.awslogs.data);
     var zippedInput = new Buffer(input.awslogs.data, 'base64');
 
     // decompress the input
